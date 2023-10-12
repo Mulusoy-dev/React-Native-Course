@@ -9,10 +9,6 @@ import {
 } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
-  const [count, setCount] = useState(0);
-  const onPress = () => setCount((ClickCount) => ClickCount + 1);
-  const onResetCount = () => setCount(0);
-
   return (
     <View style={styles.container}>
       <Text style={styles.textView}>Hello There</Text>
@@ -37,12 +33,20 @@ const HomeScreen = ({ navigation }) => {
           onPress={() => navigation.navigate("Image")}
         />
       </View>
-      <TouchableOpacity onPress={onPress} style={styles.OpacityItem}>
-        <Text>Click Count: {count}</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={onResetCount} style={styles.OpacityResetItem}>
-        <Text>Reset Count</Text>
-      </TouchableOpacity>
+      <View style={styles.buttonView}>
+        <Button
+          title="Counter Screen"
+          color="#ef9062"
+          onPress={() => navigation.navigate("Counter")}
+        />
+      </View>
+      <View style={styles.buttonView}>
+        <Button
+          title="Color Screen"
+          color="#129062"
+          onPress={() => navigation.navigate("Color")}
+        />
+      </View>
     </View>
   );
 };
