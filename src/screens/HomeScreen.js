@@ -47,6 +47,13 @@ const HomeScreen = ({ navigation }) => {
           onPress={() => navigation.navigate("Color")}
         />
       </View>
+      <View style={styles.buttonView}>
+        <Button
+          title="Text Screen"
+          color="#9f3d62"
+          onPress={() => navigation.navigate("Text")}
+        />
+      </View>
     </View>
   );
 };
