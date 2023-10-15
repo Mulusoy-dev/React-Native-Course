@@ -54,6 +54,13 @@ const HomeScreen = ({ navigation }) => {
           onPress={() => navigation.navigate("Text")}
         />
       </View>
+      <View style={styles.buttonView}>
+        <Button
+          title="Box Screen"
+          color="#1e6d32"
+          onPress={() => navigation.navigate("Box")}
+        />
+      </View>
     </View>
   );
 };
